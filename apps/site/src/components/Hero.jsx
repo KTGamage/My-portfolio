@@ -121,8 +121,8 @@ const Hero = () => {
               className="grid grid-cols-3 gap-4 mt-8 max-w-md mx-auto lg:mx-0"
             >
               {[
-                { number: "20+", label: "Projects" },
-                { number: "15+", label: "Tech Stack" },
+                { number: "6+", label: "Projects" },
+                { number: "10+", label: "Tech Stack" },
                 { number: "2+", label: "Years" },
               ].map((stat, index) => (
                 <div

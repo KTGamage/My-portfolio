@@ -11,7 +11,7 @@ const Projects = () => {
       title: "GoPlanAI",
       description:
         "GoPlan AI is a mobile-responsive travel planning web app designed to help users plan trips based on destinations 🗺️, duration ⏳, budget 💰, and activities 🎯. It provides smart travel suggestions, activity recommendations by category, estimated travel times, and direct navigation through Google Maps integration 🧭.",
-      image: "public/projects/GoPlanAi.jpeg",
+      image: "/projects/GoPlanAI.jpeg",
       technologies: [
         "React",
         "Node.js",
@@ -33,7 +33,7 @@ const Projects = () => {
       title: "LuxuryJewellery – Modern E-Commerce Web Application",
       description:
         "💎 Luxury Jewellery is a modern, mobile-responsive 💍 e-commerce web app for jewellery shopping. It includes features like search 🔍, filters 🪄, and add-to-cart 🛒 for a smooth user experience. The admin dashboard ⚙️ lets admins manage users, products, and orders easily. Plus, the built-in Jewellery Assistant Chatbot 🤖 helps customers with product guidance and instant support ✨.",
-      image: "public/projects/LuxuryJewellery.png",
+      image: "/projects/LuxuryJewellery.png",
       technologies: ["React", "MongoDB", "TailwindCSS", "Gemini API", "Nodejs", "Express.js", "JWT Token", "Git"],
       category: "fullstack",
       github: "https://github.com",
@@ -46,7 +46,7 @@ const Projects = () => {
       title: "Teacher Management System",
       description:
         "📘 Teacher Management System is a web-based platform designed to simplify school management tasks. It allows admins, section heads, and principals 👩‍💼 to manage teacher records 👨‍🏫, prepare timetables 📅, handle student marks 🧾, and process leave requests 📝 efficiently. The system ensures smooth communication and organized administration within the school environment 🏫.",
-      image: "public/projects/TeacherManagementSystem.png",
+      image: "/projects/TeacherManagementSystem.png",
       technologies: ["PHP", "Laraval", "MySql", "Postman"],
       category: "fullstack",
       github: "https://github.com/KTGamage/Teacher-management-system.git",
@@ -59,7 +59,7 @@ const Projects = () => {
       title: "AuraS-Skin Care App",
       description:
         "🌸 AuraS is an AI-powered skincare mobile app that helps users analyze skin conditions 🤳, get instant guidance from an AI skincare assistant chatbot 🤖, and book dermatologist appointments 🩺 easily. It also includes an admin portal ⚙️ to manage dermatologists and ensure smooth operations. AuraS brings smart technology and skincare together for a healthier, more confident you ✨.",
-      image: "public/projects/Auras.jpeg",
+      image: "/projects/Auras.jpeg",
       technologies: ["Flutter", "Dart", "Firebase"],
       category: "mobile",
       github: "https://github.com/KTGamage/AuraS-Mobile-Application.git",
@@ -72,7 +72,7 @@ const Projects = () => {
       title: "UrbanBite",
       description:
         "🍴 UrbanBite is a modern, mobile-responsive restaurant landing page designed to give users a smooth browsing experience. Visitors can easily view menus 📜, explore special dishes 🍕, and find contact details 📞 of the restaurant. Its clean design and engaging layout make UrbanBite both stylish and user-friendly ✨.",
-      image: "public/projects/UrbanBite.jpeg",
+      image: "/projects/UrbanBite.jpeg",
       technologies: ["Javascript", "HTML", "CSS"],
       category: "web",
       github: "https://github.com/KTGamage/Restaurant-site.git",
@@ -85,7 +85,7 @@ const Projects = () => {
       title: "FoodieDelivery",
       description:
         "🍔 Food Delivery Site is a modern and mobile-responsive web application that lets users browse delicious food items 🍱, place online orders 🛒, and contact the restaurant 📞 directly through the website. It’s designed for a smooth and fast food-ordering experience anytime, anywhere ✨.",
-      image: "public/projects/FoodieDelivery.jpeg",
+      image: "/projects/FoodieDelivery.jpeg",
       technologies: ["Javascript", "HTML", "CSS"],
       category: "web",
       github: "https://github.com/KTGamage/Food-Deliery-Website.git",
@@ -98,7 +98,7 @@ const Projects = () => {
       title: "Hostel Management System",
       description:
         "🏠 Hostel Management System is a secure web platform designed to manage and maintain student records 🧑‍🎓 efficiently. It helps keep student details organized and safe 🔐, while allowing the Subwarden 👨‍💼 to act as the admin and oversee all hostel activities smoothly.",
-      image: "public/projects/HMSystem.png",
+      image: "/projects/HMSystem.png",
       technologies: ["Laraval", "PHP", "Bootstrap", "MySql"],
       category: "fullstack",
       github: "https://github.com/KTGamage/susl-hostel-management-system.git",

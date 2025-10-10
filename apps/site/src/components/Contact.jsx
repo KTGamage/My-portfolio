@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import ThreeDMeshBackground from './ThreeDMeshBackground'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,8 +36,8 @@ const Contact = () => {
     {
       icon: '📧',
       title: 'Email',
-      value: 'kasun.tharak@example.com',
-      link: 'mailto:kasun.tharak@example.com',
+      value: 'kasun.tharaka@example.com',
+      link: 'mailto:kasun.tharaka@example.com',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -56,49 +57,52 @@ const Contact = () => {
     {
       icon: '💼',
       title: 'LinkedIn',
-      value: 'linkedin.com/in/kasuntharak',
-      link: 'https://linkedin.com/in/kasuntharak',
+      value: 'linkedin.com/in/kasuntharaka',
+      link: 'https://linkedin.com/in/kasuntharaka',
       color: 'from-orange-500 to-red-500'
     }
   ]
 
   const socialLinks = [
-    { name: 'GitHub', icon: '💻', url: 'https://github.com/kasuntharak', color: 'hover:bg-gray-900' },
-    { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/in/kasuntharak', color: 'hover:bg-blue-600' },
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/kasuntharak', color: 'hover:bg-sky-500' },
-    { name: 'Instagram', icon: '📷', url: 'https://instagram.com/kasuntharak', color: 'hover:bg-pink-600' }
+    { name: 'GitHub', icon: '💻', url: 'https://github.com/kasuntharaka', color: 'hover:bg-gray-900' },
+    { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com/in/kasuntharaka', color: 'hover:bg-blue-600' },
+    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/kasuntharaka', color: 'hover:bg-sky-500' },
+    { name: 'Instagram', icon: '📷', url: 'https://instagram.com/kasuntharaka', color: 'hover:bg-pink-600' }
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* 3D Mesh Background */}
+      <ThreeDMeshBackground />
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4 rounded-full"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, innovative projects, and technology partnerships
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <div>
-              <h3 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Let's Connect</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Let's Connect</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 Whether you have a project in mind, want to collaborate, or just want to say hello, 
                 I'd love to hear from you. Feel free to reach out through any of the following channels.
               </p>
@@ -114,7 +118,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ x: 10, scale: 1.02 }}
-                  className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 group cursor-pointer"
+                  className="flex items-center gap-4 p-4 bg-white dark:bg-gray-900 rounded-2xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 group cursor-pointer backdrop-blur-sm"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${info.color} rounded-xl flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {info.icon}
@@ -134,7 +138,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="pt-6"
+              className="pt-4"
             >
               <h4 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Follow Me</h4>
               <div className="flex gap-3">
@@ -144,7 +148,7 @@ const Contact = () => {
                     href={social.url}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-lg ${social.color} text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-300 shadow-md`}
+                    className={`w-12 h-12 bg-white dark:bg-gray-900 rounded-xl flex items-center justify-center text-lg ${social.color} text-gray-700 dark:text-gray-300 hover:text-white transition-all duration-300 shadow-md backdrop-blur-sm`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -160,7 +164,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-2xl p-8"
+            className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg backdrop-blur-sm"
           >
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Send Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -176,7 +180,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -191,7 +195,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -208,7 +212,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                   placeholder="What's this about?"
                 />
               </div>
@@ -224,7 +228,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300 resize-vertical"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300 resize-vertical"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>

@@ -74,7 +74,7 @@ const RunningBanner = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 py-4 overflow-hidden">
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 py-4 overflow-hidden mt-10">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{

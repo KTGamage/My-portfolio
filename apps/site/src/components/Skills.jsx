@@ -1,6 +1,6 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import ThreeDMeshBackground from './ThreeDMeshBackground'
+import React from "react";
+import { motion } from "framer-motion";
+import ThreeDMeshBackground from "./ThreeDMeshBackground";
 
 const Skills = () => {
   const skillCategories = [
@@ -8,36 +8,36 @@ const Skills = () => {
       category: "Frontend Development",
       icon: "🎨",
       skills: [
-        { name: 'React', level: 90, icon: '⚛️' },
-        { name: 'JavaScript', level: 85, icon: '🟨' },
-        { name: 'TypeScript', level: 80, icon: '🔷' },
-        { name: 'HTML/CSS', level: 95, icon: '🌐' },
-        { name: 'Tailwind CSS', level: 88, icon: '💨' }
-      ]
+        { name: "React", level: 90, image: "/images/tech/react.png" },
+        { name: "JavaScript", level: 85, image: "/images/tech/javascript.png" },
+        { name: "HTML", level: 95, image: "/images/tech/html.png" },
+        { name: "CSS", level: 90, image: "/images/tech/css.png" },
+        { name: "Tailwind CSS", level: 88, image: "/images/tech/tailwind.png" },
+      ],
     },
     {
       category: "Backend Development",
       icon: "⚙️",
       skills: [
-        { name: 'Node.js', level: 85, icon: '🟢' },
-        { name: 'Express.js', level: 82, icon: '🚂' },
-        { name: 'Python', level: 88, icon: '🐍' },
-        { name: 'MongoDB', level: 80, icon: '🍃' },
-        { name: 'REST API', level: 85, icon: '🔗' }
-      ]
+        { name: "Node.js", level: 85, image: "/images/tech/nodejs.png" },
+        { name: "Express.js", level: 82, image: "/images/tech/express.png" },
+        { name: "Python", level: 88, image: "/images/tech/python.png" },
+        { name: "MongoDB", level: 80, image: "/images/tech/mongodb.png" },
+        { name: "REST API", level: 85, image: "/images/tech/api.png" },
+      ],
     },
     {
       category: "Tools & Technologies",
       icon: "🛠️",
       skills: [
-        { name: 'Git/GitHub', level: 90, icon: '📚' },
-        { name: 'Docker', level: 75, icon: '🐳' },
-        { name: 'AWS', level: 70, icon: '☁️' },
-        { name: 'Firebase', level: 80, icon: '🔥' },
-        { name: 'Figma', level: 85, icon: '🎯' }
-      ]
-    }
-  ]
+        { name: "Git/GitHub", level: 90, image: "/images/tech/git.png" },
+        { name: "Docker", level: 75, image: "/images/tech/docker.png" },
+        { name: "AWS", level: 70, image: "/images/tech/aws.png" },
+        { name: "Firebase", level: 80, image: "/images/tech/firebase.png" },
+        { name: "Figma", level: 85, image: "/images/tech/figma.png" },
+      ],
+    },
+  ];
 
   const SkillBar = ({ skill, index }) => (
     <motion.div
@@ -48,10 +48,19 @@ const Skills = () => {
     >
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center space-x-3">
-          <span className="text-xl">{skill.icon}</span>
-          <span className="font-semibold text-gray-800 dark:text-white">{skill.name}</span>
+          {/* <span className="text-xl">{skill.icon}</span> */}
+          <img
+            src={skill.image}
+            alt={skill.name}
+            className="w-6 h-6 object-contain"
+          />
+          <span className="font-semibold text-gray-800 dark:text-white">
+            {skill.name}
+          </span>
         </div>
-        <span className="text-gray-600 dark:text-gray-300 font-medium">{skill.level}%</span>
+        <span className="text-gray-600 dark:text-gray-300 font-medium">
+          {skill.level}%
+        </span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
         <motion.div
@@ -62,13 +71,16 @@ const Skills = () => {
         />
       </div>
     </motion.div>
-  )
+  );
 
   return (
-    <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+    <section
+      id="skills"
+      className="py-16 bg-gray-50 dark:bg-gray-800 relative overflow-hidden"
+    >
       {/* 3D Mesh Background */}
       <ThreeDMeshBackground />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -82,7 +94,8 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are the technologies and tools I work with to bring ideas to life
+            Here are the technologies and tools I work with to bring ideas to
+            life
           </p>
         </motion.div>
 
@@ -102,7 +115,7 @@ const Skills = () => {
                   {category.category}
                 </h3>
               </div>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, index) => (
                   <SkillBar key={skill.name} skill={skill} index={index} />
@@ -119,15 +132,18 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white">Tech Stack</h3>
+          <h3 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white">
+            Tech Stack
+          </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
-              { name: 'React', icon: '⚛️', color: 'from-blue-400 to-cyan-400' },
-              { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-emerald-400' },
-              { name: 'Python', icon: '🐍', color: 'from-yellow-500 to-amber-400' },
-              { name: 'MongoDB', icon: '🍃', color: 'from-green-600 to-lime-400' },
-              { name: 'TypeScript', icon: '🔷', color: 'from-blue-600 to-indigo-400' },
-              { name: 'AWS', icon: '☁️', color: 'from-orange-500 to-red-400' },
+              { name: "React", image: "/images/tech/react.png" },
+              { name: "Node.js", image: "/images/tech/nodejs.png" },
+              { name: "Python", image: "/images/tech/python.png" },
+              { name: "MongoDB", image: "/images/tech/mongodb.png" },
+              { name: "TypeScript", image: "/images/tech/typescript.png" },
+              { name: "AWS", image: "/images/tech/aws.png" },
+              
             ].map((tech, index) => (
               <motion.div
                 key={tech.name}
@@ -137,17 +153,21 @@ const Skills = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg flex flex-col items-center justify-center hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${tech.color} rounded-xl flex items-center justify-center text-2xl mb-3 shadow-lg`}>
-                  {tech.icon}
-                </div>
-                <span className="font-semibold text-gray-700 dark:text-gray-300">{tech.name}</span>
+                <img
+                  src={tech.image}
+                  alt={tech.name}
+                  className="w-16 h-16 object-contain mb-3 p-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
+                />
+                <span className="font-semibold text-gray-700 dark:text-gray-300">
+                  {tech.name}
+                </span>
               </motion.div>
             ))}
           </div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

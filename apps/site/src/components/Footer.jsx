@@ -6,14 +6,14 @@ import emailjs from "@emailjs/browser";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
-  const [subscribeStatus, setSubscribeStatus] = useState(null); // null, 'success', 'error'
+  const [subscribeStatus, setSubscribeStatus] = useState(null); 
   const [isSubscribing, setIsSubscribing] = useState(false);
 
   // EmailJS configuration for newsletter
   const NEWSLETTER_CONFIG = {
-    SERVICE_ID: "service_86rjb3p", // Use your existing service or create new one
-    TEMPLATE_ID: "template_p77jwhi", // Your newsletter template ID
-    PUBLIC_KEY: "S7MEM65j3dvM5bZHT", // Your existing public key
+    SERVICE_ID: "service_86rjb3p", 
+    TEMPLATE_ID: "template_p77jwhi",
+    PUBLIC_KEY: "S7MEM65j3dvM5bZHT", 
   };
 
   // Auto-hide status messages
@@ -120,9 +120,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: "📧", text: "kasun.tharaka@example.com" },
-    { icon: "📱", text: "+94 77 123 4567" },
-    { icon: "📍", text: "Sabaragamuwa University, Sri Lanka" },
+    { icon: "📧", text: "kasuntharaka18628@gmail.com" },
+    { icon: "📱", text: "+94 76 626 5387" },
+    { icon: "📍", text: "Ambalangoda, Sri Lanka" },
   ];
 
   return (

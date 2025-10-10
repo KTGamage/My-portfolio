@@ -231,7 +231,7 @@ const Contact = () => {
                     <img
                       src={info.image}
                       alt={info.title}
-                      className="w-10 h-10 object-contain"
+                      className="w-10 h-10 object-contain filter brightness-0 invert"
                     />
                   </div>
                   <div>

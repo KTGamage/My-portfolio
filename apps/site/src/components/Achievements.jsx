@@ -1,87 +1,106 @@
 // components/Achievements.jsx
-import React from 'react'
-import { motion } from 'framer-motion'
-import ThreeDMeshBackground from './ThreeDMeshBackground'
+import React from "react";
+import { motion } from "framer-motion";
+import ThreeDMeshBackground from "./ThreeDMeshBackground";
 
 const Achievements = () => {
   const achievements = [
     {
       title: "Hackathon Winner",
       organization: "University Tech Fest 2023",
-      description: "First place in university-level hackathon for developing an AI-powered learning platform",
+      description:
+        "First place in university-level hackathon for developing an AI-powered learning platform",
       year: "2023",
       icon: "🏆",
-      color: "from-yellow-500 to-amber-500"
+      color: "from-yellow-500 to-amber-500",
     },
     {
       title: "Best Final Year Project",
       organization: "Faculty of Computing",
-      description: "Awarded for innovative approach in final year project on machine learning applications",
+      description:
+        "Awarded for innovative approach in final year project on machine learning applications",
       year: "2024",
       icon: "⭐",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Google Developer Scholarship",
       organization: "Google & Andela",
-      description: "Selected among top candidates for mobile web specialist nanodegree program",
+      description:
+        "Selected among top candidates for mobile web specialist nanodegree program",
       year: "2023",
       icon: "📱",
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Open Source Contributor",
       organization: "GitHub",
-      description: "Active contributor to multiple open source projects with 50+ contributions",
+      description:
+        "Active contributor to multiple open source projects with 50+ contributions",
       year: "2024",
       icon: "💻",
-      color: "from-purple-500 to-pink-500"
-    }
-  ]
+      color: "from-purple-500 to-pink-500",
+    },
+  ];
 
   const certifications = [
     {
-      name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      date: "2024",
-      credential: "AWS-CCP-12345",
-      icon: "☁️"
+      name: " User Experience Design - Learn UI UX App Design with Figma ",
+      issuer: "Udemy",
+      date: "2025",
+      credential: "UC-fc8734db-b00d-4c87-938e-cce02a652db8",
+      icon: "🎨",
+      link: "https://udemy-certificate.s3.amazonaws.com/image/UC-fc8734db-b00d-4c87-938e-cce02a652db8.jpg", 
     },
     {
-      name: "Google Cloud Associate Engineer",
-      issuer: "Google Cloud",
-      date: "2023",
-      credential: "GCP-AE-67890",
-      icon: "🔧"
+      name: "Python for Data Science, AI & Development",
+      issuer: "Coursera",
+      date: "2025",
+      credential: "U0J0VZAL3LPS",
+      icon: "📊",
+      link: "https://coursera.org/share/78e81d5f02f9b3aea88ef6e9254077ad", 
     },
     {
-      name: "TensorFlow Developer Certificate",
-      issuer: "TensorFlow",
-      date: "2023",
-      credential: "TFD-45678",
-      icon: "🧠"
+      name: "Dart Mastery - Become a Dart Master From Zero to Hero",
+      issuer: "Udemy",
+      date: "2025",
+      credential: "UC-ddd09d7d-b4c5-464d-a95b-a48b1ca62f18",
+      icon: "📱",
+      link: "https://www.udemy.com/certificate/UC-ddd09d7d-b4c5-464d-a95b-a48b1ca62f18/", 
     },
     {
-      name: "MongoDB University Certification",
-      issuer: "MongoDB",
-      date: "2023",
-      credential: "MDB-23456",
-      icon: "🍃"
-    }
-  ]
+      name: "Full PHP CRASH Course | Core PHP Exercises 60+ with Solution",
+      issuer: "Udemy",
+      date: "2025",
+      credential: "UC-e31b0260-04b6-485f-a95a-5ed7f7e46925",
+      icon: "🐘",
+      link: "https://www.udemy.com/certificate/UC-e31b0260-04b6-485f-a95a-5ed7f7e46925/", 
+    },
+    {
+      name: "Agile Project Management",
+      issuer: "Google",
+      date: "2025",
+      credential: "0MTTJUE0YOKR",
+      icon: "📂",
+      link: "https://coursera.org/share/5720120bd6e3e453deb3bb5e04d97b46", 
+    },
+  ];
 
   const stats = [
-    { number: '20+', label: 'Projects Completed', icon: '🚀' },
-    { number: '5+', label: 'Hackathons', icon: '⚡' },
-    { number: '15+', label: 'Technologies', icon: '🛠️' },
-    { number: '50+', label: 'GitHub Contributions', icon: '📚' }
-  ]
+    { number: "6+", label: "Projects Completed", icon: "🚀" },
+    { number: "5+", label: "Certifications", icon: "📜" },
+    { number: "10+", label: "Technologies", icon: "🛠️" },
+    { number: "220+", label: "GitHub Contributions", icon: "📚" },
+  ];
 
   return (
-    <section id="achievements" className="py-16 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section
+      id="achievements"
+      className="py-16 bg-white dark:bg-gray-900 relative overflow-hidden"
+    >
       {/* 3D Mesh Background */}
       <ThreeDMeshBackground />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -95,7 +114,8 @@ const Achievements = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Recognition and certifications that highlight my dedication to continuous learning and excellence
+            Recognition and certifications that highlight my dedication to
+            continuous learning and excellence
           </p>
         </motion.div>
 
@@ -119,7 +139,9 @@ const Achievements = () => {
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -172,7 +194,9 @@ const Achievements = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Certifications</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
+            Certifications
+          </h3>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden backdrop-blur-sm">
             <div className="grid md:grid-cols-2 gap-6 p-6">
               {certifications.map((cert, index) => (
@@ -181,21 +205,36 @@ const Achievements = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-blue-900/20 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-blue-900/20 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 cursor-pointer group"
+                  onClick={() =>
+                    cert.link &&
+                    window.open(cert.link, "_blank", "noopener,noreferrer")
+                  }
                 >
                   <div className="flex items-start gap-4">
                     <div className="text-3xl">{cert.icon}</div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2">{cert.name}</h4>
-                      <p className="text-gray-600 dark:text-gray-300 mb-2">{cert.issuer}</p>
+                      <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        {cert.name}
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300 mb-2">
+                        {cert.issuer}
+                      </p>
                       <div className="flex items-center justify-between">
                         <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                           {cert.date}
                         </span>
-                        <code className="bg-gray-800 text-gray-200 px-3 py-1 rounded-lg text-sm font-mono">
-                          {cert.credential}
-                        </code>
+                        <div className="flex items-center gap-2">
+                          <code className="bg-gray-800 text-gray-200 px-3 py-1 rounded-lg text-sm font-mono">
+                            {cert.credential}
+                          </code>
+                          {cert.link && (
+                            <span className="text-blue-500 text-sm font-medium flex items-center gap-1">
+                              View ↗
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -206,7 +245,7 @@ const Achievements = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Achievements
+export default Achievements;

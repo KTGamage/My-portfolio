@@ -1,95 +1,111 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import ThreeDMeshBackground from './ThreeDMeshBackground'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import ThreeDMeshBackground from "./ThreeDMeshBackground";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const projects = [
     {
       id: 1,
       title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB with payment integration and admin dashboard.",
+      description:
+        "Full-stack e-commerce solution with React, Node.js, and MongoDB with payment integration and admin dashboard.",
       image: "/projects/ecommerce.jpg",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
       category: "fullstack",
       github: "https://github.com",
       live: "https://demo.com",
-      featured: true
+      status: "Complete",
+      type: "Group",
     },
     {
       id: 2,
       title: "Task Management App",
-      description: "Productivity application with real-time updates, drag-drop functionality, and team collaboration features.",
+      description:
+        "Productivity application with real-time updates, drag-drop functionality, and team collaboration features.",
       image: "/projects/task-app.jpg",
       technologies: ["React", "Firebase", "Tailwind", "Context API"],
       category: "web",
       github: "https://github.com",
       live: "https://demo.com",
-      featured: true
+      status: "Complete",
+      type: "Group",
     },
     {
       id: 3,
       title: "Weather Dashboard",
-      description: "Real-time weather application with forecasts, maps, and location-based services using modern APIs.",
+      description:
+        "Real-time weather application with forecasts, maps, and location-based services using modern APIs.",
       image: "/projects/weather-app.jpg",
       technologies: ["JavaScript", "API", "Chart.js", "CSS3"],
       category: "web",
       github: "https://github.com",
       live: "https://demo.com",
-      featured: false
+      status: "Ongoing",
+      type: "Individual",
     },
     {
       id: 4,
       title: "Portfolio Website",
-      description: "Modern responsive portfolio with dark mode, animations, and optimized performance.",
+      description:
+        "Modern responsive portfolio with dark mode, animations, and optimized performance.",
       image: "/projects/portfolio.jpg",
       technologies: ["React", "Tailwind", "Framer Motion", "Vite"],
       category: "web",
       github: "https://github.com",
       live: "https://demo.com",
-      featured: false
+      status: "Ongoing",
+      type: "Individual",
     },
     {
       id: 5,
       title: "AI Chat Application",
-      description: "Real-time chat application with AI-powered responses and sentiment analysis.",
+      description:
+        "Real-time chat application with AI-powered responses and sentiment analysis.",
       image: "/projects/chat-app.jpg",
       technologies: ["React", "Node.js", "Socket.io", "OpenAI API"],
       category: "fullstack",
       github: "https://github.com",
       live: "https://demo.com",
-      featured: true
+      status: "Complete",
+      type: "Group",
     },
     {
       id: 6,
       title: "Fitness Tracker",
-      description: "Mobile fitness application with workout plans, progress tracking, and social features.",
+      description:
+        "Mobile fitness application with workout plans, progress tracking, and social features.",
       image: "/projects/fitness-app.jpg",
       technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
       category: "mobile",
       github: "https://github.com",
       live: "https://demo.com",
-      featured: false
-    }
-  ]
+      status: "Ongoing",
+      type: "Individual",
+    },
+  ];
 
   const filters = [
-    { name: 'All Projects', value: 'all' },
-    { name: 'Full Stack', value: 'fullstack' },
-    { name: 'Web Apps', value: 'web' },
-    { name: 'Mobile', value: 'mobile' }
-  ]
+    { name: "All Projects", value: "all" },
+    { name: "Full Stack", value: "fullstack" },
+    { name: "Web Apps", value: "web" },
+    { name: "Mobile", value: "mobile" },
+  ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter)
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-16 bg-gray-50 dark:bg-gray-800 relative overflow-hidden"
+    >
       {/* 3D Mesh Background */}
       <ThreeDMeshBackground />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -103,7 +119,8 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4 rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </motion.div>
 
@@ -122,8 +139,8 @@ const Projects = () => {
               whileTap={{ scale: 0.95 }}
               className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-300 backdrop-blur-sm ${
                 activeFilter === filter.value
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                  : 'bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                  ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
+                  : "bg-white/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
               }`}
             >
               {filter.name}
@@ -145,18 +162,37 @@ const Projects = () => {
               {/* Project Image */}
               <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                 <div className="text-5xl text-white/90">
-                  {project.featured ? '⭐' : '💻'}
+                  💻 {/* Keep this or replace with actual project image */}
                 </div>
-                {project.featured && (
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ delay: 0.3 }}
-                    className="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
-                  >
-                    Featured
-                  </motion.div>
-                )}
+
+                {/* Status Badge - Top Right */}
+                <motion.span
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold shadow-lg ${
+                    project.status === "Complete"
+                      ? "bg-green-500 text-white"
+                      : "bg-orange-500 text-white"
+                  }`}
+                >
+                  {project.status}
+                </motion.span>
+
+                {/* Type Badge - Top Left */}
+                <motion.span
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ delay: 0.5 }}
+                  className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold shadow-lg ${
+                    project.type === "Individual"
+                      ? "bg-blue-500 text-white"
+                      : "bg-purple-500 text-white"
+                  }`}
+                >
+                  {project.type}
+                </motion.span>
+
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                   <div className="flex gap-3">
                     <motion.a
@@ -167,7 +203,11 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="text-lg">📁</span>
+                      <img
+                        src="/images/tech/github.png"
+                        alt="GitHub"
+                        className="w-5 h-5"
+                      />
                     </motion.a>
                     <motion.a
                       href={project.live}
@@ -191,7 +231,7 @@ const Projects = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
-                
+
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
@@ -217,7 +257,12 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span>📁</span> Code
+                    <img
+                      src="/images/tech/github.png"
+                      alt="GitHub"
+                      className="w-4 h-4 filter brightness-0 invert"
+                    />
+                    Code
                   </motion.a>
                   <motion.a
                     href={project.live}
@@ -274,7 +319,7 @@ const Projects = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

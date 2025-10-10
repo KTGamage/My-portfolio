@@ -1,4 +1,3 @@
-// components/LoadingScreen.jsx
 import React from 'react'
 import { motion } from 'framer-motion'
 
@@ -25,7 +24,7 @@ const LoadingScreen = () => {
           transition={{ delay: 0.3 }}
           className="text-3xl font-bold text-white mb-2"
         >
-          Kasun Tharak
+          Kasun Tharaka
         </motion.h1>
         
         <motion.p

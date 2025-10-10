@@ -8,81 +8,103 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "GoPlanAI",
       description:
-        "Full-stack e-commerce solution with React, Node.js, and MongoDB with payment integration and admin dashboard.",
-      image: "/projects/ecommerce.jpg",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+        "GoPlan AI is a mobile-responsive travel planning web app designed to help users plan trips based on destinations 🗺️, duration ⏳, budget 💰, and activities 🎯. It provides smart travel suggestions, activity recommendations by category, estimated travel times, and direct navigation through Google Maps integration 🧭.",
+      image: "public/projects/GoPlanAi.jpeg",
+      technologies: [
+        "React",
+        "Node.js",
+        "Firebase",
+        "GeminiAPI",
+        "ShadcnUI",
+        "GoogleAuth",
+        "TailwindCsSS",
+        "Git",
+      ],
       category: "fullstack",
-      github: "https://github.com",
-      live: "https://demo.com",
+      github: "https://github.com/KTGamage/AI-Travel-Planner.git",
+      live: "https://ai-travel-planner-six-cyan.vercel.app/",
       status: "Complete",
-      type: "Group",
+      type: "Individual",
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "LuxuryJewellery – Modern E-Commerce Web Application",
       description:
-        "Productivity application with real-time updates, drag-drop functionality, and team collaboration features.",
-      image: "/projects/task-app.jpg",
-      technologies: ["React", "Firebase", "Tailwind", "Context API"],
-      category: "web",
-      github: "https://github.com",
-      live: "https://demo.com",
-      status: "Complete",
-      type: "Group",
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description:
-        "Real-time weather application with forecasts, maps, and location-based services using modern APIs.",
-      image: "/projects/weather-app.jpg",
-      technologies: ["JavaScript", "API", "Chart.js", "CSS3"],
-      category: "web",
-      github: "https://github.com",
-      live: "https://demo.com",
-      status: "Ongoing",
-      type: "Individual",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description:
-        "Modern responsive portfolio with dark mode, animations, and optimized performance.",
-      image: "/projects/portfolio.jpg",
-      technologies: ["React", "Tailwind", "Framer Motion", "Vite"],
-      category: "web",
-      github: "https://github.com",
-      live: "https://demo.com",
-      status: "Ongoing",
-      type: "Individual",
-    },
-    {
-      id: 5,
-      title: "AI Chat Application",
-      description:
-        "Real-time chat application with AI-powered responses and sentiment analysis.",
-      image: "/projects/chat-app.jpg",
-      technologies: ["React", "Node.js", "Socket.io", "OpenAI API"],
+        "💎 Luxury Jewellery is a modern, mobile-responsive 💍 e-commerce web app for jewellery shopping. It includes features like search 🔍, filters 🪄, and add-to-cart 🛒 for a smooth user experience. The admin dashboard ⚙️ lets admins manage users, products, and orders easily. Plus, the built-in Jewellery Assistant Chatbot 🤖 helps customers with product guidance and instant support ✨.",
+      image: "public/projects/LuxuryJewellery.png",
+      technologies: ["React", "MongoDB", "TailwindCSS", "Gemini API", "Nodejs", "Express.js", "JWT Token", "Git"],
       category: "fullstack",
       github: "https://github.com",
       live: "https://demo.com",
       status: "Complete",
+      type: "Individual",
+    },
+    {
+      id: 3,
+      title: "Teacher Management System",
+      description:
+        "📘 Teacher Management System is a web-based platform designed to simplify school management tasks. It allows admins, section heads, and principals 👩‍💼 to manage teacher records 👨‍🏫, prepare timetables 📅, handle student marks 🧾, and process leave requests 📝 efficiently. The system ensures smooth communication and organized administration within the school environment 🏫.",
+      image: "public/projects/TeacherManagementSystem.png",
+      technologies: ["PHP", "Laraval", "MySql", "Postman"],
+      category: "fullstack",
+      github: "https://github.com/KTGamage/Teacher-management-system.git",
+      // live: "https://demo.com",
+      status: "Ongoing",
       type: "Group",
     },
     {
-      id: 6,
-      title: "Fitness Tracker",
+      id: 4,
+      title: "AuraS-Skin Care App",
       description:
-        "Mobile fitness application with workout plans, progress tracking, and social features.",
-      image: "/projects/fitness-app.jpg",
-      technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
+        "🌸 AuraS is an AI-powered skincare mobile app that helps users analyze skin conditions 🤳, get instant guidance from an AI skincare assistant chatbot 🤖, and book dermatologist appointments 🩺 easily. It also includes an admin portal ⚙️ to manage dermatologists and ensure smooth operations. AuraS brings smart technology and skincare together for a healthier, more confident you ✨.",
+      image: "public/projects/Auras.jpeg",
+      technologies: ["Flutter", "Dart", "Firebase"],
       category: "mobile",
-      github: "https://github.com",
-      live: "https://demo.com",
+      github: "https://github.com/KTGamage/AuraS-Mobile-Application.git",
+      // live: "https://demo.com",
       status: "Ongoing",
+      type: "Group",
+    },
+    {
+      id: 5,
+      title: "UrbanBite",
+      description:
+        "🍴 UrbanBite is a modern, mobile-responsive restaurant landing page designed to give users a smooth browsing experience. Visitors can easily view menus 📜, explore special dishes 🍕, and find contact details 📞 of the restaurant. Its clean design and engaging layout make UrbanBite both stylish and user-friendly ✨.",
+      image: "public/projects/UrbanBite.jpeg",
+      technologies: ["Javascript", "HTML", "CSS"],
+      category: "web",
+      github: "https://github.com/KTGamage/Restaurant-site.git",
+      live: "https://ktgamage.github.io/Restaurant-site/",
+      status: "Complete",
       type: "Individual",
+    },
+    {
+      id: 6,
+      title: "FoodieDelivery",
+      description:
+        "🍔 Food Delivery Site is a modern and mobile-responsive web application that lets users browse delicious food items 🍱, place online orders 🛒, and contact the restaurant 📞 directly through the website. It’s designed for a smooth and fast food-ordering experience anytime, anywhere ✨.",
+      image: "public/projects/FoodieDelivery.jpeg",
+      technologies: ["Javascript", "HTML", "CSS"],
+      category: "web",
+      github: "https://github.com/KTGamage/Food-Deliery-Website.git",
+      live: "https://ktgamage.github.io/Food-Deliery-Website/",
+      status: "Complete",
+      type: "Individual",
+    },
+    {
+      id: 6,
+      title: "Hostel Management System",
+      description:
+        "🏠 Hostel Management System is a secure web platform designed to manage and maintain student records 🧑‍🎓 efficiently. It helps keep student details organized and safe 🔐, while allowing the Subwarden 👨‍💼 to act as the admin and oversee all hostel activities smoothly.",
+      image: "public/projects/HMSystem.png",
+      technologies: ["Laraval", "PHP", "Bootstrap", "MySql"],
+      category: "fullstack",
+      github: "https://github.com/KTGamage/susl-hostel-management-system.git",
+      // live: "#",
+      status: "Complete",
+      type: "Group",
     },
   ];
 
@@ -161,9 +183,19 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <div className="text-5xl text-white/90">
-                  💻 {/* Keep this or replace with actual project image */}
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                  }}
+                />
+
+                {/* Fallback Icon (only shows if image fails to load) */}
+                {/* <div className="absolute inset-0 flex items-center justify-center text-5xl text-white/90">
+                  💻
+                </div> */}
 
                 {/* Status Badge - Top Right */}
                 <motion.span

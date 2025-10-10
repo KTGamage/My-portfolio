@@ -1,10 +1,13 @@
-import React from 'react'
-import { TypeAnimation } from 'react-type-animation'
-import { motion } from 'framer-motion'
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="home" className="h-screen relative bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 overflow-hidden">
+    <section
+      id="home"
+      className="h-screen relative bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 overflow-hidden"
+    >
       {/* 3D Dot Animation Background */}
       <div className="absolute inset-0">
         {/* Animated dots */}
@@ -28,7 +31,7 @@ const Hero = () => {
             }}
           />
         ))}
-        
+
         {/* Background gradient elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 dark:bg-blue-800 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-40 right-10 w-96 h-96 bg-purple-200 dark:bg-purple-800 rounded-full blur-3xl opacity-30"></div>
@@ -51,18 +54,21 @@ const Hero = () => {
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-gray-800 dark:text-white"
             >
               <span className="block text-2xl md:text-3xl lg:text-4xl mb-3 text-gray-600 dark:text-gray-300">
-                Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">Kasun Tharaka Gamage</span>
+                Hi, I'm{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">
+                  Kasun Tharaka Gamage
+                </span>
               </span>
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 <TypeAnimation
                   sequence={[
-                    'Full Stack Developer',
+                    "Full Stack Developer",
                     2000,
-                    'AI/ML Enthusiast',
+                    "AI/ML Enthusiast",
                     2000,
-                    'UI/UX Enthusiast',
+                    "UI/UX Enthusiast",
                     2000,
-                    'Problem Solver',
+                    "Problem Solver",
                     2000,
                   ]}
                   speed={50}
@@ -70,37 +76,41 @@ const Hero = () => {
                 />
               </span>
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
               className="text-lg md:text-xl mb-6 text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed"
             >
-              Passionate developer creating digital experiences with modern technologies. 
-              Currently pursuing Computing & Information Systems at Sabaragamuwa University.
+              Passionate developer creating digital experiences with modern
+              technologies. Currently pursuing Computing & Information Systems
+              at Sabaragamuwa University.
             </motion.p>
-            
+
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
             >
-              <motion.button 
+              <motion.a
+                href="/files/cv.pdf"
+                download="Kasun_Tharaka_CV.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 📄 Download CV
-              </motion.button>
-              <motion.button 
+              </motion.a>
+              <motion.a
+                href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-xl font-semibold text-base hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
               >
                 🚀 View Projects
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Quick Stats */}
@@ -111,13 +121,20 @@ const Hero = () => {
               className="grid grid-cols-3 gap-4 mt-8 max-w-md mx-auto lg:mx-0"
             >
               {[
-                { number: '20+', label: 'Projects' },
-                { number: '15+', label: 'Tech Stack' },
-                { number: '2+', label: 'Years' }
+                { number: "20+", label: "Projects" },
+                { number: "15+", label: "Tech Stack" },
+                { number: "2+", label: "Years" },
               ].map((stat, index) => (
-                <div key={index} className="text-center p-3 bg-white/50 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm">
-                  <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">{stat.number}</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">{stat.label}</div>
+                <div
+                  key={index}
+                  className="text-center p-3 bg-white/50 dark:bg-gray-800/50 rounded-xl backdrop-blur-sm"
+                >
+                  <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    {stat.number}
+                  </div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </motion.div>
@@ -134,16 +151,24 @@ const Hero = () => {
               {/* Rotated background elements */}
               <motion.div
                 animate={{ rotate: 12 }}
-                transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
                 className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl"
               ></motion.div>
-              
+
               <motion.div
                 animate={{ rotate: -8 }}
-                transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
                 className="absolute inset-0 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl"
               ></motion.div>
-              
+
               {/* Profile Picture Container */}
               <div className="absolute inset-4 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
                 <div className="text-center p-4 w-full h-full flex items-center justify-center">
@@ -155,18 +180,20 @@ const Hero = () => {
                   >
                     <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
                       {/* Replace with your actual profile picture */}
-                      <img 
-                        src="/profile.jpg" 
+                      <img
+                        src="/profile.jpg"
                         alt="Kasun Tharaka Gamage"
                         className="w-full h-full object-cover rounded-full"
                         onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
+                          e.target.style.display = "none";
+                          e.target.nextSibling.style.display = "flex";
                         }}
                       />
                       {/* Fallback if image doesn't load */}
                       <div className="hidden w-full h-full items-center justify-center bg-gradient-to-r from-blue-400 to-purple-500 rounded-full">
-                        <span className="text-4xl md:text-5xl font-bold text-white">KT</span>
+                        <span className="text-4xl md:text-5xl font-bold text-white">
+                          KT
+                        </span>
                       </div>
                     </div>
                   </motion.div>
@@ -200,7 +227,7 @@ const Hero = () => {
         </motion.div>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

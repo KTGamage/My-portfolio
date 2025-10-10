@@ -1,54 +1,53 @@
-
-import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useTheme } from '../context/ThemeContext'
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Achievements', href: '#achievements' },
-    { name: 'Contact', href: '#contact' }
-  ]
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Achievements", href: "#achievements" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   const ThemeSwitcher = () => (
     <div className="flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-      {['light', 'system', 'dark'].map((t) => (
+      {["light", "system", "dark"].map((t) => (
         <button
           key={t}
           onClick={() => setTheme(t)}
           className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
             theme === t
-              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+              ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
+              : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
           }`}
         >
           {/* {t === 'light' ? '☀️' : t === 'dark' ? '🌙' : '💻'} */}
         </button>
       ))}
     </div>
-  )
+  );
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'glass-effect py-2' : 'bg-transparent py-4'
+        isScrolled ? "glass-effect py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-6">
@@ -81,13 +80,15 @@ const Navbar = () => {
           {/* Right side controls */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeSwitcher />
-            <motion.button
+            <motion.a
+              href="/files/cv.pdf"
+              download="Kasun_Tharaka_CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all"
             >
               Download CV
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,11 +98,26 @@ const Navbar = () => {
               className="text-gray-700 dark:text-gray-300"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 {isMobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -113,7 +129,7 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden mt-4 glass-effect rounded-2xl p-4"
             >
@@ -128,19 +144,21 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 ))}
-                <motion.button
+                <motion.a
+                  href="/files/cv.pdf"
+                  download="Kasun_Tharaka_CV.pdf"
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-full font-semibold mt-4"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-full font-semibold mt-4 text-center"
                 >
                   Download CV
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
     </motion.nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

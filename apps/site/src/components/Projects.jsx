@@ -94,7 +94,7 @@ const Projects = () => {
       type: "Individual",
     },
     {
-      id: 6,
+      id: 7,
       title: "Hostel Management System",
       description:
         "🏠 Hostel Management System is a secure web platform designed to manage and maintain student records 🧑‍🎓 efficiently. It helps keep student details organized and safe 🔐, while allowing the Subwarden 👨‍💼 to act as the admin and oversee all hostel activities smoothly.",

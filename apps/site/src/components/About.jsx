@@ -17,7 +17,7 @@ const About = () => {
       description: "Achieved 8A's and 1B"
     },
     {
-      degree: "BSc in Computing & Information Systems",
+      degree: "BSc(Hons) in Computing & Information Systems",
       institution: "Sabaragamuwa University of Sri Lanka",
       period: "2021 - Present",
       description: "Specializing in Software Engineering, AI/ML, and Web Technologies"

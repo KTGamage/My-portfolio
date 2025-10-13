@@ -2,6 +2,36 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 
+
+// ThemeSwitcher Component
+const ThemeSwitcher = () => {
+  const { theme, setTheme } = useTheme()
+
+  const handleThemeChange = (newTheme) => {
+    console.log('Theme button clicked:', newTheme)
+    setTheme(newTheme)
+  }
+
+  return (
+    <div className="flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+      {['light', 'system', 'dark'].map((t) => (
+        <button
+          key={t}
+          onClick={() => handleThemeChange(t)}
+          className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 ${
+            theme === t
+              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-gray-700/50'
+          }`}
+          title={t === 'light' ? 'Light Mode' : t === 'dark' ? 'Dark Mode' : 'System Theme'}
+        >
+          {t === 'light' ? '☀️' : t === 'dark' ? '🌙' : '💻'}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,46 +54,6 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-//   const ThemeSwitcher = () => (
-//     <div className="flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-//       {["light", "system", "dark"].map((t) => (
-//         <button
-//           key={t}
-//           onClick={() => setTheme(t)}
-//           className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
-//             theme === t
-//               ? "bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
-//               : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-//           }`}
-//         >
-//           {t === 'light' ? '☀️' : t === 'dark' ? '🌙' : '💻'}
-//         </button>
-//       ))}
-//     </div>
-//   );
-
-
-const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme() // Move useTheme inside here
-
-  return (
-    <div className="flex items-center space-x-2 bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-      {['light', 'system', 'dark'].map((t) => (
-        <button
-          key={t}
-          onClick={() => setTheme(t)}
-          className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
-            theme === t
-              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-          }`}
-        >
-          {t === 'light' ? '☀️' : t === 'dark' ? '🌙' : '💻'}
-        </button>
-      ))}
-    </div>
-  )
-}
 
   return (
     <motion.nav

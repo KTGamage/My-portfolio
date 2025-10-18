@@ -2,7 +2,9 @@
 
 A stunning, modern portfolio website built with React, Vite, and Tailwind CSS featuring 3D animations, real-time chatbot, and email integration.
 
-![Portfolio Preview](https://img.shields.io/badge/Portfolio-Modern-blue) ![React](https://img.shields.io/badge/React-18.2.0-61dafb) ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-v4-38b2ac) ![Vercel](https://img.shields.io/badge/Deployed-Vercel-000000)
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,js,nodejs,mongodb,tailwind,css,html,git,github,vite,vercel" />
+</p>
 
 ## ✨ Features
 

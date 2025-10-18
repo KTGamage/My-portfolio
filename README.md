@@ -3,7 +3,7 @@
 A stunning, modern portfolio website built with React, Vite, and Tailwind CSS featuring 3D animations, real-time chatbot, and email integration.
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,js,nodejs,mongodb,tailwind,css,html,git,github,vite,vercel" />
+  <img src="https://skillicons.dev/icons?i=react,js,nodejs,tailwind,css,html,git,github,vite,vercel" />
 </p>
 
 ## ✨ Features

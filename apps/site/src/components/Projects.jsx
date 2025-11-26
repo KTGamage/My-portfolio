@@ -25,7 +25,7 @@ const Projects = () => {
       category: "fullstack",
       github: "https://github.com/KTGamage/AI-Travel-Planner.git",
       live: "https://ai-travel-planner-six-cyan.vercel.app/",
-      status: "Complete",
+      status: "Completed",
       type: "Individual",
     },
     {
@@ -34,15 +34,46 @@ const Projects = () => {
       description:
         "💎 Luxury Jewellery is a modern, mobile-responsive 💍 e-commerce web app for jewellery shopping. It includes features like search 🔍, filters 🪄, and add-to-cart 🛒 for a smooth user experience. The admin dashboard ⚙️ lets admins manage users, products, and orders easily. Plus, the built-in Jewellery Assistant Chatbot 🤖 helps customers with product guidance and instant support ✨.",
       image: "/projects/LuxuryJewellery.png",
-      technologies: ["React", "MongoDB", "TailwindCSS", "Gemini API", "Nodejs", "Express.js", "JWT Token", "Git"],
+      technologies: [
+        "React",
+        "MongoDB",
+        "TailwindCSS",
+        "Gemini API",
+        "Nodejs",
+        "Express.js",
+        "JWT Token",
+        "Git",
+      ],
       category: "fullstack",
-      github: "https://github.com",
-      live: "https://demo.com",
-      status: "Complete",
+      github: "https://github.com/KTGamage/Jewelly-Store-MERN-App.git",
+      live: "https://luxury-jewelly-frontend.vercel.app",
+      status: "Completed",
       type: "Individual",
     },
     {
       id: 3,
+      title: "InsightFlow — AI-Powered Tech Blog",
+      description:
+        "InsightFlow is a MERN-stack personal blog platform designed for sharing rich tech articles with smart interactive features. 📘 It includes Text-to-Speech support 🔊 so users can listen to posts instead of reading, and AI-based language translation 🌍 that helps convert blog content into multiple languages instantly. The platform also features JWT authentication 🔐, post CRUD management ✍️, likes ❤️, comments 💬, and AI language processing for accurate translations. Users can update their profiles with avatars 🧑‍💻, and enjoy a clean, responsive UI 📱 with form validation ✅, loading states ⚡, and friendly error handling 🚦 to ensure smooth user experience.",
+      image: "/projects/InsightFlow.png",
+      technologies: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "Postman",
+        "Vercel",
+        "Web Speech API",
+      ],
+      category: "fullstack",
+      github: "https://github.com/KTGamage/personal-blog-platform.git",
+      live: "https://inshightflow.vercel.app",
+      status: "Completed",
+      type: "Individual",
+    },
+
+    {
+      id: 4,
       title: "Teacher Management System",
       description:
         "📘 Teacher Management System is a web-based platform designed to simplify school management tasks. It allows admins, section heads, and principals 👩‍💼 to manage teacher records 👨‍🏫, prepare timetables 📅, handle student marks 🧾, and process leave requests 📝 efficiently. The system ensures smooth communication and organized administration within the school environment 🏫.",
@@ -55,7 +86,7 @@ const Projects = () => {
       type: "Group",
     },
     {
-      id: 4,
+      id: 5,
       title: "AuraS-Skin Care App",
       description:
         "🌸 AuraS is an AI-powered skincare mobile app that helps users analyze skin conditions 🤳, get instant guidance from an AI skincare assistant chatbot 🤖, and book dermatologist appointments 🩺 easily. It also includes an admin portal ⚙️ to manage dermatologists and ensure smooth operations. AuraS brings smart technology and skincare together for a healthier, more confident you ✨.",
@@ -68,7 +99,7 @@ const Projects = () => {
       type: "Group",
     },
     {
-      id: 5,
+      id: 6,
       title: "UrbanBite",
       description:
         "🍴 UrbanBite is a modern, mobile-responsive restaurant landing page designed to give users a smooth browsing experience. Visitors can easily view menus 📜, explore special dishes 🍕, and find contact details 📞 of the restaurant. Its clean design and engaging layout make UrbanBite both stylish and user-friendly ✨.",
@@ -77,11 +108,11 @@ const Projects = () => {
       category: "web",
       github: "https://github.com/KTGamage/Restaurant-site.git",
       live: "https://ktgamage.github.io/Restaurant-site/",
-      status: "Complete",
+      status: "Completed",
       type: "Individual",
     },
     {
-      id: 6,
+      id: 7,
       title: "FoodieDelivery",
       description:
         "🍔 Food Delivery Site is a modern and mobile-responsive web application that lets users browse delicious food items 🍱, place online orders 🛒, and contact the restaurant 📞 directly through the website. It’s designed for a smooth and fast food-ordering experience anytime, anywhere ✨.",
@@ -90,11 +121,11 @@ const Projects = () => {
       category: "web",
       github: "https://github.com/KTGamage/Food-Deliery-Website.git",
       live: "https://ktgamage.github.io/Food-Deliery-Website/",
-      status: "Complete",
+      status: "Completed",
       type: "Individual",
     },
     {
-      id: 7,
+      id: 8,
       title: "Hostel Management System",
       description:
         "🏠 Hostel Management System is a secure web platform designed to manage and maintain student records 🧑‍🎓 efficiently. It helps keep student details organized and safe 🔐, while allowing the Subwarden 👨‍💼 to act as the admin and oversee all hostel activities smoothly.",
@@ -103,7 +134,7 @@ const Projects = () => {
       category: "fullstack",
       github: "https://github.com/KTGamage/susl-hostel-management-system.git",
       // live: "#",
-      status: "Complete",
+      status: "Completed",
       type: "Group",
     },
   ];
